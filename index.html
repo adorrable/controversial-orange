@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Adornment by Ade – Luxury Yoruba-inspired 18k Gold Jewelry</title>
+  <style>
+    :root {
+      --gold: #C69C2A;
+      --gold-dark: #8B6A1A;
+      --cream: #F7F0E7;
+      --brown: #3A2A1A;
+      --bg: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial; color: #2b2b2b; background: #fff; }
+    a { text-decoration: none; color: inherit; }
+    header { position: sticky; top: 0; z-index: 1000; background: rgba(255,255,255,0.96); border-bottom: 1px solid #eee; }
+    .container { width: min(1100px, 92%); margin: 0 auto; padding: 0 1rem; }
+    .brand { display:flex; align-items:center; gap: .6rem; font-weight:700; padding: .75rem 0; }
+    .logo { width: 28px; height: 28px; border-radius: 6px; background: linear-gradient(135deg, #D4AF37 0%, #8B6A1A 100%); display:inline-flex; align-items:center; justify-content:center; color:#fff; font-size:14px; }
+    nav ul { display:flex; gap:1rem; list-style:none; padding:0; margin:0; }
+    nav ul li a { padding: .75rem 0.5rem; display:inline-block; color:#333; }
+    .cta-btn { display:inline-block; padding:.75rem 1.2rem; background: #D4AF37; color:#fff; border-radius:6px; font-weight:600; }
+    .hero { position: relative; height: 72vh; min-height: 520px; display:flex; align-items:center; justify-content:center; color:white; overflow:hidden; }
+    .hero img { position:absolute; width:100%; height:100%; object-fit:cover; }
+    .hero-overlay { position:absolute; inset:0; background: linear-gradient(to right, rgba(0,0,0,.55), rgba(0,0,0,.15)); }
+    .hero-content { position: relative; z-index: 1; max-width: 720px; text-align: left; padding: 2rem; background: rgba(255,255,255,.04); border-radius: 8px; }
+    h1 { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(32px, 5vw, 56px); line-height: 1.04; margin:0 0 .6rem; color:#fff; text-shadow: 0 2px 8px rgba(0,0,0,.25);} 
+    p.subtitle { font-size: clamp(16px, 2.5vw, 20px); color:#f5f5f5; margin-bottom: 1.2rem; }
+    .btn-row { display:flex; gap:.8rem; flex-wrap: wrap; }
+    .btn { padding:.8rem 1.2rem; border-radius:6px; font-weight:600; border:1px solid rgba(255,255,255,.6); background: rgba(0,0,0,.2); color:#fff; }
+    .btn.primary { background: #D4AF37; border: none; }
+    .sections { padding: 4rem 0; }
+    .section-title { font-family: Georgia, 'Times New Roman', serif; font-size: 28px; margin: 0 0 1rem; color: #3a2a1a; }
+    .grid-3 { display:grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .card { border: 1px solid #eee; border-radius: 12px; overflow:hidden; background:#fff; box-shadow: 0 6px 20px rgba(0,0,0,.05); }
+    .card img { width:100%; height: 240px; object-fit: cover; display:block; }
+    .card-content { padding: 1rem; }
+    .badge { display:inline-flex; align-items:center; gap:.5rem; padding:.25rem .5rem; border-radius:999px; font-size:12px; background:#fff; color:#844; border:1px solid #f1e0c7; }
+    .price { font-family: 'Arial Black', Gadget, sans-serif; color: #b07a00; font-size: 1.1rem; }
+    .product-title { font-weight:700; font-size: 1.05rem; color:#2b2b2b; margin: .25rem 0; }
+    .product-desc { color:#555; font-size: .95rem; margin-bottom: .5rem; min-height: 2.4em; }
+    .card-actions { display:flex; gap:.5rem; padding: .5rem 1rem 1rem; }
+    .ghost { background: #fff; border:1px solid #e8d6bf; color:#5b3a00; }
+    .whatsapp-link { color:#fff; text-decoration:none; background:#25D366; padding:.6rem 1rem; border-radius:6px; display:inline-flex; align-items:center; gap:.5rem; font-weight:600; }
+    .instagram-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap: .6rem; }
+    .instagram-grid img { width:100%; height: 110px; object-fit: cover; border-radius:6px; }
+    .newsletter { display:flex; gap: .6rem; flex-wrap: wrap; align-items:center; }
+    input[type="email"] { padding:.8rem; border-radius:6px; border:1px solid #ddd; min-width: 240px; }
+    footer { background:#111; color:#eee; padding: 2rem 0; }
+    footer a { color:#fff; }
+    .footer-grid { display:grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 1.5rem; align-items: start; }
+    .brand-mark { display:flex; align-items:center; gap:.6rem; font-weight:700; }
+    .brand-mark .mini { width: 24px; height: 24px; border-radius: 6px; background: linear-gradient(135deg, #D4AF37, #8B6A1A); display:inline-block; }
+    .socials { display:flex; gap:.5rem; margin-top:.5rem; }
+    .socials a { width:28px; height:28px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; background:#333; color:#fff; }
+    .fab { position: fixed; right: 20px; bottom: 20px; z-index: 999; background:#25D366; color:#fff; width:58px; height:58px; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow: 0 6px 16px rgba(0,0,0,.2); }
+    @media (max-width: 1000px) {
+      .grid-3 { grid-template-columns: repeat(2, 1fr); }
+      .instagram-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 700px) {
+      .grid-3 { grid-template-columns: 1fr; }
+      nav ul { display:none; }
+      .hero { height: 60vh; }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <header>
+    <div class='container' style='display:flex; justify-content:space-between; align-items:center; padding: .75rem 0;'>
+      <div class='brand'>
+        <span class='logo' aria-label='Adornments logo'>A</span>
+        <span>Adornment by Ade</span>
+      </div>
+      <nav aria-label='Main'>
+        <ul>
+          <li><a href='#collections' aria-label='Go to Collections'>Collections</a></li>
+          <li><a href='#story' aria-label='Go to Our Story'>Our Story</a></li>
+          <li><a href='#shop' aria-label='Go to Shop'>Shop</a></li>
+          <li><a href='#newsletter' aria-label='Go to Newsletter'>Newsletter</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class='hero' aria-label='Hero'>
+    <img src='https://im.runware.ai/image/ws/2/ii/2caa7eab-e3ef-4236-8911-45cc07ad1fa7.jpg' alt='Luxurious Yoruba inspired 18k gold jewelry on deep background' />
+    <div class='hero-overlay'></div>
+    <div class='hero-content container' style='max-width:700px;'>
+      <h1>Adornment by Ade</h1>
+      <p class='subtitle'>Luxury 18k gold jewelry inspired by traditional Yoruba craftsmanship. Handcrafted in Nigeria with warm, timeless elegance.</p>
+      <div class='btn-row'>
+        <a class='btn primary' href='#collections' aria-label='Shop the collection'>Shop the Collection</a>
+        <a class='btn' href='#story' aria-label='Our Story'>Our Story</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLECTIONS -->
+  <section id='collections' class='sections' aria-label='Featured collections'>
+    <div class='container'>
+      <h2 class='section-title' style='text-align:left;'>Featured Collections</h2>
+      <div class='grid-3'>
+        <article class='card'>
+          <img src='https://im.runware.ai/image/ws/2/ii/129c7276-fde8-4941-8e84-b5c4e1c2d6c4.jpg' alt='Necklaces collection image'>
+          <div class='card-content'>
+            <span class='badge' aria-label='Necklaces collection tag'>Necklaces</span>
+            <h3 class='product-title' style='margin:6px 0 6px;'>Necklaces</h3>
+            <p class='product-desc'>Statement pieces featuring Yoruba motifs and 18k gold finish.</p>
+            <div class='card-actions'>
+              <a class='btn primary' href='#collections' aria-label='View Necklaces collection'>View Collection</a>
+              <a class='whatsapp-link' href='https://wa.me/2348090000000?text=I%27m%20interested%20in%20Adornment%20by%20Ade%20Necklaces%20collection' target='_blank' rel='noopener'>Shop via WhatsApp</a>
+            </div>
+          </div>
+        </article>
+
+        <article class='card'>
+          <img src='https://im.runware.ai/image/ws/2/ii/b802e50a-91af-4722-8cac-f48b3ca9e62b.jpg' alt='Bracelets collection image'>
+          <div class='card-content'>
+            <span class='badge' aria-label='Bracelets collection tag'>Bracelets</span>
+            <h3 class='product-title' style='margin:6px 0 6px;'>Bracelets</h3>
+            <p class='product-desc'>Wrap yourself in 18k gold with Yoruba-inspired patterns.</p>
+            <div class='card-actions'>
+              <a class='btn primary' href='#collections' aria-label='View Bracelets collection'>View Collection</a>
+              <a class='whatsapp-link' href='https://wa.me/2348090000000?text=I%27m%20interested%20in%20Adornment%20by%20Ade%20Bracelets%20collection' target='_blank' rel='noopener'>Shop via WhatsApp</a>
+            </div>
+          </div>
+        </article>
+
+        <article class='card'>
+          <img src='https://im.runware.ai/image/ws/2/ii/f1199a05-9547-4c05-8df9-85cf25433a5a.jpg' alt='Earrings collection image'>
+          <div class='card-content'>
+            <span class='badge' aria-label='Earrings collection tag'>Earrings</span>
+            <h3 class='product-title' style='margin:6px 0 6px;'>Earrings</h3>
+            <p class='product-desc'>Elegant studs and drops designed with Yoruba artistry.</p>
+            <div class='card-actions'>
+              <a class='btn primary' href='#collections' aria-label='View Earrings collection'>View Collection</a>
+              <a class='whatsapp-link' href='https://wa.me/2348090000000?text=I%27m%20interested%20in%20Adornment%20by%20Ade%20Earrings%20collection' target='_blank' rel='noopener'>Shop via WhatsApp</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section id='story' class='sections' aria-label='Our story' style='background:#faf6ea;'>
+    <div class='container' style='display:grid; grid-template-columns: 1.1fr 0.9fr; gap:2rem;'>
+      <div>
+        <h2 class='section-title' style='color:#3a2a1a;'>Our Story</h2>
+        <p style='color:#5a4630; line-height:1.7; font-size:1.05rem;'>Adornment by Ade is born from a reverence for Yoruba heritage and the craft of goldsmithing. Each piece is meticulously handcrafted in small batches using ethically sourced 18k gold. The brand honors village artisans, passing down techniques through generations, merging tradition with contemporary luxury.</p>
+        <ul style='color:#5a4630; line-height:1.8;'>
+          <li>Traditional Yoruba motifs reimagined in modern forms</li>
+          <li>Sustainably sourced materials and responsible practices</li>
+          <li>Showcasing Nigerian artisans on the global stage</li>
+        </ul>
+      </div>
+      <div>
+        <img src='https://im.runware.ai/image/ws/2/ii/2e6c7e22-bbb5-4cfe-b6ff-f384d6bb41f8.jpg' alt='Craftsmanship workshop image' style='width:100%; height:100%; object-fit:cover; border-radius:12px; border:1px solid #e6d4bf;'>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOP AND PRICING -->
+  <section id='shop' class='sections' aria-label='Product showcase with pricing' style='background:#fff;'>
+    <div class='container'>
+      <h2 class='section-title' style='text-align:left; margin-bottom:1rem;'>Product Showcase</h2>
+      <p style='color:#555; margin-bottom:1.5rem;'>Handcrafted 18k gold pieces ranging ₦150,000 to ₦500,000. Each piece ships with a certificate of authenticity.</p>
+      <div class='grid-3'>
+        <article class='card' aria-label='Product 1'>
+          <img src='https://im.runware.ai/image/ws/2/ii/4644e3cd-6c76-4eeb-897a-d662e16ce1c3.jpg' alt='Statement Yoruba Necklace product image'>
+          <div class='card-content'>
+            <div class='product-title' style='font-size:1.05rem;'>Statement Yoruba Necklace</div>
+            <div class='price' style='margin:6px 0;'>₦250,000</div>
+            <p class='product-desc'>An iconic piece with hand-engraved motifs and a bold presence.</p>
+            <div class='card-actions'>
+              <a class='btn primary' href='https://wa.me/2348090000000?text=I%27m%20interested%20in%20Adornment%20by%20Ade%20Statement%20Necklace' target='_blank' rel='noopener'>Order Now</a>
+              <button class='btn ghost' disabled>Inquire</button>
+            </div>
+          </div>
+        </article>
+
+        <article class='card' aria-label='Product 2'>
+          <img src='https://im.runware.ai/image/ws/2/ii/7958d6cb-bc52-48f3-afad-d3821fcbffe0.jpg' alt='Solar Gold Bracelet product image'>
+          <div class='card-content'>
+            <div class='product-title' style='font-size:1.05rem;'>Solar Gold Bracelet</div>
+            <div class='price' style='margin:6px 0;'>₦180,000</div>
+            <p class='product-desc'>A wrap around bracelet inspired by Yoruba sun motifs.</p>
+            <div class='card-actions'>
+              <a class='btn primary' href='https://wa.me/2348090000000?text=I%27m%20interested%20in%20Adornment%20by%20Ade%20Solar%20Gold%20Bracelet' target='_blank' rel='noopener'>Order Now</a>
+              <button class='btn ghost' disabled>Inquire</button>
+            </div>
+          </div>
+        </article>
+
+        <article class='card' aria-label='Product 3'>
+          <img src='https://im.runware.ai/image/ws/2/ii/522a8844-58f7-45b3-9539-8ed3d1420b46.jpg' alt='Aso Earrings product image'>
+          <div class='card-content'>
+            <div class='product-title' style='font-size:1.05rem;'>Aso Earrings</div>
+            <div class='price' style='margin:6px 0;'>₦150,000</div>
+            <p class='product-desc'>Dainty studs featuring Yoruba ceremonial motifs.</p>
+            <div class='card-actions'>
+              <a class='btn primary' href='https://wa.me/2348090000000?text=I%27m%20interested%20in%20Adornment%20by%20Ade%20Aso%20Earrings' target='_blank' rel='noopener'>Order Now</a>
+              <button class='btn ghost' disabled>Inquire</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM FEED -->
+  <section id='instagram' class='sections' aria-label='Instagram feed' style='background:#fff;'>
+    <div class='container' style='text-align:left;'>
+      <h2 class='section-title' style='margin-bottom:.6rem;'>Insta Gallery</h2>
+      <p style='color:#555; margin-bottom:1.2rem;'>Follow our journey on Instagram for the latest drops and behind-the-scenes.</p>
+      <div class='instagram-grid' aria-label='Instagram grid'>
+        <img src='https://im.runware.ai/image/ws/2/ii/4644e3cd-6c76-4eeb-897a-d662e16ce1c3.jpg' alt='Instagram image 1'>
+        <img src='https://im.runware.ai/image/ws/2/ii/7958d6cb-bc52-48f3-afad-d3821fcbffe0.jpg' alt='Instagram image 2'>
+        <img src='https://im.runware.ai/image/ws/2/ii/522a8844-58f7-45b3-9539-8ed3d1420b46.jpg' alt='Instagram image 3'>
+        <img src='https://im.runware.ai/image/ws/2/ii/2e6c7e22-bbb5-4cfe-b6ff-f384d6bb41f8.jpg' alt='Instagram image 4'>
+        <img src='https://im.runware.ai/image/ws/2/ii/4644e3cd-6c76-4eeb-897a-d662e16ce1c3.jpg' alt='Instagram image 1'>
+        <img src='https://im.runware.ai/image/ws/2/ii/7958d6cb-bc52-48f3-afad-d3821fcbffe0.jpg' alt='Instagram image 2'>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section id='newsletter' class='sections' aria-label='Newsletter signup' style='background:#faf6ea;'>
+    <div class='container' style='display:flex; flex-direction:column; gap:1rem; align-items:flex-start;'>
+      <h2 class='section-title' style='margin:0;'>Newsletter</h2>
+      <p style='color:#5a4630;'>Get exclusive early access to new collections and artisan stories.</p>
+      <form class='newsletter' onsubmit='subscribe(event)'>
+        <input type='email' id='email' placeholder='Enter your email' required />
+        <button class='btn primary' type='submit' aria-label='Subscribe'>Subscribe</button>
+      </form>
+      <p id='sub-msg' style='color:#5a4630; font-size:.9rem;'></p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer aria-label='Footer'>
+    <div class='container footer-grid'>
+      <div class='brand-mark' style='align-items:flex-start;'>
+        <span class='mini' aria-label='logo-mark'></span>
+        <div>
+          <strong>Adornment by Ade</strong>
+        </div>
+      </div>
+      <div>
+        <strong>Contact</strong>
+        <p style='margin:.4rem 0 0; color:#ddd;'>
+          Address: Lagos, Nigeria<br/> Phone: +234 812 345 6789
+        </p>
+      </div>
+      <div>
+        <strong>Explore</strong>
+        <ul style='list-style:none; padding:0; margin:0;'>
+          <li><a href='#collections' style='color:#fff;'>Collections</a></li>
+          <li><a href='#story' style='color:#fff;'>Our Story</a></li>
+          <li><a href='#newsletter' style='color:#fff;'>Newsletter</a></li>
+        </ul>
+        <div class='socials' aria-label='Socials'>
+          <a href='https://instagram.com/adornmentbyAde' target='_blank' rel='noopener' aria-label='Instagram'>IG</a>
+          <a href='https://wa.me/2348090000000' target='_blank' rel='noopener' aria-label='WhatsApp'>WA</a>
+        </div>
+        <p style='margin-top:.6rem; font-size:.8rem; color:#ddd;'>made with ❤️ by adorrable.dev</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp button -->
+  <a class='fab' href='https://wa.me/2348090000000?text=Hello%20Adornment%20by%20Ade%20I%27d%20like%20to%20inquire' target='_blank' aria-label='Chat with us on WhatsApp'>
+    <svg width='28' height='28' viewBox='0 0 24 24' fill='white' xmlns='http://www.w3.org/2000/svg' aria-hidden='true'>
+      <path d='M20.5 3.5H3.5A2.5 2.5 0 001 6v12a2.5 2.5 0 002.5 2.5h17a2.5 2.5 0 002.5-2.5V6a2.5 2.5 0 00-2.5-2.5zM12 17l-5-3.333V7.5L12 14l5-6.5v6.167L12 17z' fill='white'/>
+    </svg>
+  </a>
+
+  <script>
+    function subscribe(e){
+      e.preventDefault();
+      var email = document.getElementById('email').value;
+      document.getElementById('sub-msg').textContent = 'Thank you! Please check ' + email + ' for confirmation.';
+      document.getElementById('email').value = '';
+    }
+  </script>
+</body>
+</html>
